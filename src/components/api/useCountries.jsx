@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+// import data from "../../data.json";
 export default function useCountries() {
 	const [countries, setCountries] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
@@ -8,7 +9,8 @@ export default function useCountries() {
 		const setData = async function () {
 			try {
 				setIsLoading(true);
-				const res = await fetch("../../data.json");
+				// const res = await fetch("../../data.json");
+				const res = await fetch("./data.json");
 				const data = await res.json();
 				setCountries(data);
 				console.log(data);
