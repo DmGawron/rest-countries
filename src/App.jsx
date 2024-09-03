@@ -23,7 +23,7 @@ function App() {
 
 		if (searchCountryQuery !== "") {
 			filtered = filtered.filter((country) =>
-				country.name.toLowerCase().includes(searchCountryQuery)
+				country.name.common.toLowerCase().includes(searchCountryQuery)
 			);
 		}
 
